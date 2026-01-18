@@ -170,3 +170,29 @@ function verDesempenho() {
     correta: 0 // índice da alternativa correta (0 a 4)
 }
 
+bancoQuestoes.portugues.push(
+    {
+        pergunta: "Em textos técnicos, a linguagem predominante deve ser:",
+        alternativas: [
+            "Subjetiva e emocional",
+            "Ambígua e figurada",
+            "Clara e objetiva",
+            "Informal e coloquial",
+            "Poética e conotativa"
+        ],
+        correta: 2
+    },
+    {
+        pergunta: "Assinale a frase com uso correto da crase:",
+        alternativas: [
+            "Entregou o relatório à gerente",
+            "Chegou a à refinaria",
+            "Dirigiu-se à à empresa",
+            "Foi a à operação",
+            "Saiu a noite"
+        ],
+        correta: 0
+    }
+);
+
+
