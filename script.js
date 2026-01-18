@@ -158,3 +158,15 @@ function verDesempenho() {
 
     document.getElementById("simulado").innerHTML = html;
 }
+{
+    pergunta: "Texto claro e objetivo da questão",
+    alternativas: [
+        "Alternativa A",
+        "Alternativa B",
+        "Alternativa C",
+        "Alternativa D",
+        "Alternativa E"
+    ],
+    correta: 0 // índice da alternativa correta (0 a 4)
+}
+
