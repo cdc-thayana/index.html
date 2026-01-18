@@ -273,3 +273,86 @@ bancoQuestoes.eletrotecnica.push(
         correta: 2
     }
 );
+
+/* =========================
+   TESTE FINAL GERAL
+========================= */
+
+let provaFinal = [];
+let indiceProva = 0;
+let acertosProva = 0;
+
+function iniciarTesteFinal() {
+    provaFinal = [];
+    indiceProva = 0;
+    acertosProva = 0;
+
+    provaFinal = provaFinal.concat(
+        bancoQuestoes.portugues.slice(0, 5),
+        bancoQuestoes.matematica.slice(0, 5),
+        bancoQuestoes.raciocinio.slice(0, 10),
+        bancoQuestoes.quimica.slice(0, 10),
+        bancoQuestoes.operacao.slice(0, 10),
+        bancoQuestoes.seguranca.slice(0, 5),
+        bancoQuestoes.eletrotecnica.slice(0, 5)
+    );
+
+    alert("Teste Final Geral iniciado – 50 questões");
+    mostrarQuestaoFinal();
+}
+
+function mostrarQuestaoFinal() {
+    const container = document.getElementById("simulado");
+
+    if (indiceProva >= provaFinal.length) {
+        finalizarTesteFinal();
+        return;
+    }
+
+    const q = provaFinal[indiceProva];
+
+    container.innerHTML = `
+        <h3>Questão ${indiceProva + 1} de ${provaFinal.length}</h3>
+        <p>${q.pergunta}</p>
+
+        ${q.alternativas.map((alt, i) => `
+            <label>
+                <input type="radio" name="resposta" value="${i}">
+                ${alt}
+            </label><br>
+        `).join("")}
+
+        <button onclick="responderTesteFinal()">Responder</button>
+    `;
+}
+
+function responderTesteFinal() {
+    const marcada = document.querySelector('input[name="resposta"]:checked');
+    if (!marcada) {
+        alert("Selecione uma alternativa.");
+        return;
+    }
+
+    const resposta = parseInt(marcada.value);
+    const correta = provaFinal[indiceProva].correta;
+
+    if (resposta === correta) acertosProva++;
+
+    indiceProva++;
+    mostrarQuestaoFinal();
+}
+
+function finalizarTesteFinal() {
+    const nota = ((acertosProva / provaFinal.length) * 100).toFixed(1);
+
+    salvarResultado("teste-final-geral", nota);
+
+    document.getElementById("simulado").innerHTML = `
+        <h2>🏁 Teste Final Geral Concluído</h2>
+        <p>Total de questões: ${provaFinal.length}</p>
+        <p>Acertos: ${acertosProva}</p>
+        <p><strong>Nota Final: ${nota}%</strong></p>
+        <p>Simulação no padrão Petrobras / Cesgranrio</p>
+    `;
+}
+
