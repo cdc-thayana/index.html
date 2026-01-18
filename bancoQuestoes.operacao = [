@@ -1,0 +1,24 @@
+bancoQuestoes.operacao = [
+    {
+        pergunta: "A etapa de refino do petróleo tem como objetivo principal:",
+        alternativas: [
+            "Extrair o petróleo do solo",
+            "Transportar o petróleo bruto",
+            "Transformar o petróleo em derivados",
+            "Armazenar o petróleo cru",
+            "Reduzir impactos ambientais"
+        ],
+        correta: 2
+    },
+    {
+        pergunta: "Na instrumentação industrial, a variável responsável por medir a quantidade de fluido é:",
+        alternativas: [
+            "Pressão",
+            "Temperatura",
+            "Nível",
+            "Vazão",
+            "Densidade"
+        ],
+        correta: 3
+    }
+];

@@ -1,0 +1,24 @@
+bancoQuestoes.quimica = [
+    {
+        pergunta: "A mistura formada por água e sal é classificada como:",
+        alternativas: [
+            "Heterogênea",
+            "Coloidal",
+            "Homogênea",
+            "Suspensão",
+            "Gasosa"
+        ],
+        correta: 2
+    },
+    {
+        pergunta: "Qual processo é utilizado para separar líquidos com diferentes pontos de ebulição?",
+        alternativas: [
+            "Filtração",
+            "Decantação",
+            "Destilação",
+            "Centrifugação",
+            "Evaporação"
+        ],
+        correta: 2
+    }
+];

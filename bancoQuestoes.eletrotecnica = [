@@ -1,0 +1,24 @@
+bancoQuestoes.eletrotecnica = [
+    {
+        pergunta: "A Lei de Ohm relaciona:",
+        alternativas: [
+            "Potência, tempo e energia",
+            "Tensão, corrente e resistência",
+            "Corrente e potência",
+            "Resistência e energia",
+            "Tensão e frequência"
+        ],
+        correta: 1
+    },
+    {
+        pergunta: "A NR-10 trata da segurança em:",
+        alternativas: [
+            "Trabalho em altura",
+            "Espaços confinados",
+            "Máquinas e equipamentos",
+            "Instalações e serviços em eletricidade",
+            "Inflamáveis"
+        ],
+        correta: 3
+    }
+];

@@ -1,0 +1,24 @@
+bancoQuestoes.seguranca = [
+    {
+        pergunta: "A NR-20 trata da segurança relacionada a:",
+        alternativas: [
+            "Trabalho em altura",
+            "Espaços confinados",
+            "Inflamáveis e combustíveis",
+            "Instalações elétricas",
+            "Equipamentos de proteção"
+        ],
+        correta: 2
+    },
+    {
+        pergunta: "O EPI tem como finalidade:",
+        alternativas: [
+            "Eliminar o risco",
+            "Substituir o EPC",
+            "Proteger o trabalhador",
+            "Aumentar a produtividade",
+            "Reduzir custos"
+        ],
+        correta: 2
+    }
+];

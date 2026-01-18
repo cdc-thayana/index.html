@@ -1,0 +1,18 @@
+bancoQuestoes.raciocinio = [
+    {
+        pergunta: "Complete a sequência: 2, 4, 8, 16, ?",
+        alternativas: ["18", "24", "30", "32", "34"],
+        correta: 3
+    },
+    {
+        pergunta: "Se todo operador é treinado e João é operador, então:",
+        alternativas: [
+            "João não é treinado",
+            "João pode não ser treinado",
+            "João é treinado",
+            "Nenhum operador é treinado",
+            "João é supervisor"
+        ],
+        correta: 2
+    }
+];

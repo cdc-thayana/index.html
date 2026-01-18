@@ -1,0 +1,35 @@
+bancoQuestoes.portugues = [
+    {
+        pergunta: "A principal finalidade de um texto informativo é:",
+        alternativas: [
+            "Expressar sentimentos pessoais",
+            "Narrar fatos fictícios",
+            "Transmitir informações de forma objetiva",
+            "Convencer o leitor por meio de opinião",
+            "Criar suspense narrativo"
+        ],
+        correta: 2
+    },
+    {
+        pergunta: "No contexto da interpretação textual, inferir significa:",
+        alternativas: [
+            "Copiar uma informação do texto",
+            "Ignorar o sentido do texto",
+            "Deduzir informações implícitas",
+            "Alterar o conteúdo apresentado",
+            "Criticar a opinião do autor"
+        ],
+        correta: 2
+    },
+    {
+        pergunta: "A concordância verbal está correta em:",
+        alternativas: [
+            "Houveram muitos acidentes",
+            "Existem problema na operação",
+            "Fazem dois anos que trabalho",
+            "Há riscos no ambiente industrial",
+            "Devem haver normas rígidas"
+        ],
+        correta: 3
+    }
+];

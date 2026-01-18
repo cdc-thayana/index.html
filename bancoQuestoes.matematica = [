@@ -1,0 +1,17 @@
+bancoQuestoes.matematica = [
+    {
+        pergunta: "20% de 250 corresponde a:",
+        alternativas: ["40", "45", "50", "55", "60"],
+        correta: 2
+    },
+    {
+        pergunta: "Se um equipamento custa R$ 800 e sofre desconto de 10%, o novo valor será:",
+        alternativas: ["R$ 720", "R$ 740", "R$ 760", "R$ 780", "R$ 800"],
+        correta: 0
+    },
+    {
+        pergunta: "A média aritmética dos números 4, 6 e 10 é:",
+        alternativas: ["6", "7", "8", "9", "10"],
+        correta: 2
+    }
+];
