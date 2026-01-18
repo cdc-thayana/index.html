@@ -1,6 +1,6 @@
 /* =========================
-   BANCO DE QUESTÕES (BASE)
-   ========================= */
+   BANCO DE QUESTÕES (GLOBAL)
+========================= */
 
 const bancoQuestoes = {
     portugues: [],
@@ -14,7 +14,7 @@ const bancoQuestoes = {
 
 /* =========================
    CONFIGURAÇÃO DE SIMULADOS
-   ========================= */
+========================= */
 
 const configSimulados = {
     portugues: 20,
@@ -27,33 +27,29 @@ const configSimulados = {
 };
 
 /* =========================
-   VARIÁVEIS DE CONTROLE
-   ========================= */
+   CONTROLE
+========================= */
 
 let disciplinaAtual = "";
 let questaoAtual = 0;
 let acertos = 0;
-let respostasUsuario = [];
 
 /* =========================
    INICIAR SIMULADO
-   ========================= */
+========================= */
 
 function iniciarSimulado(disciplina) {
     disciplinaAtual = disciplina;
     questaoAtual = 0;
     acertos = 0;
-    respostasUsuario = [];
 
-    const total = configSimulados[disciplina];
-    alert(`Simulado iniciado: ${disciplina.toUpperCase()} | ${total} questões`);
-
+    alert(`Simulado iniciado: ${disciplina.toUpperCase()} | ${configSimulados[disciplina]} questões`);
     mostrarQuestao();
 }
 
 /* =========================
    MOSTRAR QUESTÃO
-   ========================= */
+========================= */
 
 function mostrarQuestao() {
     const questoes = bancoQuestoes[disciplinaAtual];
@@ -84,32 +80,28 @@ function mostrarQuestao() {
 }
 
 /* =========================
-   RESPONDER QUESTÃO
-   ========================= */
+   RESPONDER
+========================= */
 
 function responder() {
-    const selecionada = document.querySelector('input[name="resposta"]:checked');
-    if (!selecionada) {
+    const marcada = document.querySelector('input[name="resposta"]:checked');
+    if (!marcada) {
         alert("Selecione uma alternativa.");
         return;
     }
 
-    const resposta = parseInt(selecionada.value);
+    const resposta = parseInt(marcada.value);
     const correta = bancoQuestoes[disciplinaAtual][questaoAtual].correta;
 
-    respostasUsuario.push(resposta);
-
-    if (resposta === correta) {
-        acertos++;
-    }
+    if (resposta === correta) acertos++;
 
     questaoAtual++;
     mostrarQuestao();
 }
 
 /* =========================
-   FINALIZAR SIMULADO
-   ========================= */
+   FINALIZAR
+========================= */
 
 function finalizarSimulado() {
     const total = configSimulados[disciplinaAtual];
@@ -119,7 +111,7 @@ function finalizarSimulado() {
 
     document.getElementById("simulado").innerHTML = `
         <h2>Simulado Finalizado</h2>
-        <p>Disciplina: <strong>${disciplinaAtual.toUpperCase()}</strong></p>
+        <p><strong>${disciplinaAtual.toUpperCase()}</strong></p>
         <p>Acertos: ${acertos} de ${total}</p>
         <p>Nota final: <strong>${nota}%</strong></p>
     `;
@@ -127,22 +119,21 @@ function finalizarSimulado() {
 
 /* =========================
    SALVAR RESULTADO
-   ========================= */
+========================= */
 
 function salvarResultado(disciplina, nota) {
     let historico = JSON.parse(localStorage.getItem("resultados")) || [];
     historico.push({
-        disciplina: disciplina,
-        nota: nota,
+        disciplina,
+        nota,
         data: new Date().toLocaleDateString()
     });
-
     localStorage.setItem("resultados", JSON.stringify(historico));
 }
 
 /* =========================
    VER DESEMPENHO
-   ========================= */
+========================= */
 
 function verDesempenho() {
     const historico = JSON.parse(localStorage.getItem("resultados")) || [];
@@ -158,17 +149,10 @@ function verDesempenho() {
 
     document.getElementById("simulado").innerHTML = html;
 }
-{
-    pergunta: "Texto claro e objetivo da questão",
-    alternativas: [
-        "Alternativa A",
-        "Alternativa B",
-        "Alternativa C",
-        "Alternativa D",
-        "Alternativa E"
-    ],
-    correta: 0 // índice da alternativa correta (0 a 4)
-}
+
+/* =========================
+   QUESTÕES — PORTUGUÊS
+========================= */
 
 bancoQuestoes.portugues.push(
     {
@@ -193,7 +177,12 @@ bancoQuestoes.portugues.push(
         ],
         correta: 0
     }
-)
+);
+
+/* =========================
+   QUESTÕES — MATEMÁTICA
+========================= */
+
 bancoQuestoes.matematica.push(
     {
         pergunta: "Um operador trabalha 8 horas por dia. Em 5 dias, ele trabalha quantas horas?",
@@ -205,39 +194,25 @@ bancoQuestoes.matematica.push(
         alternativas: ["150", "180", "200", "220", "250"],
         correta: 2
     }
-)
+);
+
+/* =========================
+   QUESTÕES — RACIOCÍNIO
+========================= */
 
 bancoQuestoes.raciocinio.push(
     {
         pergunta: "Complete a sequência: 3, 6, 12, 24, ?",
         alternativas: ["30", "36", "42", "48", "60"],
         correta: 3
-    },
-    {
-        pergunta: "Se todo técnico é treinado e Ana é técnica, então:",
-        alternativas: [
-            "Ana não é treinada",
-            "Ana pode não ser treinada",
-            "Ana é treinada",
-            "Nenhum técnico é treinado",
-            "Ana é supervisora"
-        ],
-        correta: 2
     }
-)
+);
+
+/* =========================
+   QUESTÕES — QUÍMICA
+========================= */
 
 bancoQuestoes.quimica.push(
-    {
-        pergunta: "Qual propriedade da matéria está relacionada à resistência à deformação?",
-        alternativas: [
-            "Elasticidade",
-            "Dureza",
-            "Densidade",
-            "Condutividade",
-            "Solubilidade"
-        ],
-        correta: 1
-    },
     {
         pergunta: "O petróleo é classificado como:",
         alternativas: [
@@ -249,7 +224,11 @@ bancoQuestoes.quimica.push(
         ],
         correta: 1
     }
-)
+);
+
+/* =========================
+   QUESTÕES — OPERAÇÃO
+========================= */
 
 bancoQuestoes.operacao.push(
     {
@@ -262,19 +241,12 @@ bancoQuestoes.operacao.push(
             "Pressão"
         ],
         correta: 2
-    },
-    {
-        pergunta: "O downstream da indústria do petróleo está relacionado a:",
-        alternativas: [
-            "Exploração",
-            "Produção",
-            "Refino e distribuição",
-            "Perfuração",
-            "Pesquisa sísmica"
-        ],
-        correta: 2
     }
-)
+);
+
+/* =========================
+   QUESTÕES — SEGURANÇA
+========================= */
 
 bancoQuestoes.seguranca.push(
     {
@@ -287,43 +259,17 @@ bancoQuestoes.seguranca.push(
             "Máquinas"
         ],
         correta: 1
-    },
-    {
-        pergunta: "O principal objetivo da análise de riscos é:",
-        alternativas: [
-            "Punir trabalhadores",
-            "Aumentar custos",
-            "Prevenir acidentes",
-            "Eliminar EPIs",
-            "Reduzir produtividade"
-        ],
-        correta: 2
     }
-)
+);
+
+/* =========================
+   QUESTÕES — ELETROTÉCNICA
+========================= */
+
 bancoQuestoes.eletrotecnica.push(
     {
         pergunta: "A unidade de medida da corrente elétrica é:",
         alternativas: ["Volt", "Ohm", "Ampère", "Watt", "Joule"],
         correta: 2
-    },
-    {
-        pergunta: "Um dispositivo utilizado para proteção contra sobrecorrente é:",
-        alternativas: [
-            "Transformador",
-            "Disjuntor",
-            "Resistor",
-            "Capacitor",
-            "Motor"
-        ],
-        correta: 1
     }
 );
-
-
-
-
-
-
-
-
-
