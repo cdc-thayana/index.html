@@ -1,0 +1,179 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f5f1e6; /* bege suave */
+    color: #1e4fa1; /* azul para textos */
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: #efe6cf;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 3px solid #1e4fa1;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+/* =========================
+   MENU DE NAVEGAÇÃO
+========================= */
+
+nav {
+    background-color: #e8dcc0;
+    padding: 12px 0;
+    border-bottom: 2px solid #1e4fa1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 6px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1e4fa1;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #ffffff;
+    border-left: 6px solid #1e4fa1;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+section h2 {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   ARTIGOS / AULAS
+========================= */
+
+article {
+    margin-bottom: 15px;
+}
+
+article h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+article p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+article a {
+    color: #1e4fa1;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+button {
+    background-color: #1e4fa1;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #163b78;
+}
+
+/* =========================
+   ALERTAS / DESTAQUES
+========================= */
+
+strong {
+    font-weight: bold;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: #1e4fa1;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
