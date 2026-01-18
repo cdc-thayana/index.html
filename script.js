@@ -193,6 +193,137 @@ bancoQuestoes.portugues.push(
         ],
         correta: 0
     }
+)
+bancoQuestoes.matematica.push(
+    {
+        pergunta: "Um operador trabalha 8 horas por dia. Em 5 dias, ele trabalha quantas horas?",
+        alternativas: ["30", "35", "40", "45", "50"],
+        correta: 2
+    },
+    {
+        pergunta: "Se 25% de um valor é 50, o valor total é:",
+        alternativas: ["150", "180", "200", "220", "250"],
+        correta: 2
+    }
+)
+
+bancoQuestoes.raciocinio.push(
+    {
+        pergunta: "Complete a sequência: 3, 6, 12, 24, ?",
+        alternativas: ["30", "36", "42", "48", "60"],
+        correta: 3
+    },
+    {
+        pergunta: "Se todo técnico é treinado e Ana é técnica, então:",
+        alternativas: [
+            "Ana não é treinada",
+            "Ana pode não ser treinada",
+            "Ana é treinada",
+            "Nenhum técnico é treinado",
+            "Ana é supervisora"
+        ],
+        correta: 2
+    }
+)
+
+bancoQuestoes.quimica.push(
+    {
+        pergunta: "Qual propriedade da matéria está relacionada à resistência à deformação?",
+        alternativas: [
+            "Elasticidade",
+            "Dureza",
+            "Densidade",
+            "Condutividade",
+            "Solubilidade"
+        ],
+        correta: 1
+    },
+    {
+        pergunta: "O petróleo é classificado como:",
+        alternativas: [
+            "Substância pura",
+            "Mistura homogênea",
+            "Mistura heterogênea",
+            "Composto químico",
+            "Elemento químico"
+        ],
+        correta: 1
+    }
+)
+
+bancoQuestoes.operacao.push(
+    {
+        pergunta: "A destilação fracionada do petróleo baseia-se na diferença de:",
+        alternativas: [
+            "Densidade",
+            "Viscosidade",
+            "Ponto de ebulição",
+            "Cor",
+            "Pressão"
+        ],
+        correta: 2
+    },
+    {
+        pergunta: "O downstream da indústria do petróleo está relacionado a:",
+        alternativas: [
+            "Exploração",
+            "Produção",
+            "Refino e distribuição",
+            "Perfuração",
+            "Pesquisa sísmica"
+        ],
+        correta: 2
+    }
+)
+
+bancoQuestoes.seguranca.push(
+    {
+        pergunta: "A NR-33 trata de:",
+        alternativas: [
+            "Trabalho em altura",
+            "Espaços confinados",
+            "Inflamáveis",
+            "Eletricidade",
+            "Máquinas"
+        ],
+        correta: 1
+    },
+    {
+        pergunta: "O principal objetivo da análise de riscos é:",
+        alternativas: [
+            "Punir trabalhadores",
+            "Aumentar custos",
+            "Prevenir acidentes",
+            "Eliminar EPIs",
+            "Reduzir produtividade"
+        ],
+        correta: 2
+    }
+)
+bancoQuestoes.eletrotecnica.push(
+    {
+        pergunta: "A unidade de medida da corrente elétrica é:",
+        alternativas: ["Volt", "Ohm", "Ampère", "Watt", "Joule"],
+        correta: 2
+    },
+    {
+        pergunta: "Um dispositivo utilizado para proteção contra sobrecorrente é:",
+        alternativas: [
+            "Transformador",
+            "Disjuntor",
+            "Resistor",
+            "Capacitor",
+            "Motor"
+        ],
+        correta: 1
+    }
 );
+
+
+
+
+
+
+
 
 
