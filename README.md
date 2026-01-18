@@ -1,4 +1,4 @@
-# 📘 Petrobras 2026 – Plataforma de Estudos (Nível Médio)
+# 📘 Petrobras Prova 2026 – Plataforma de Estudos (Nível Médio)
 
 Plataforma de estudos desenvolvida para **preparação do concurso Petrobras 2026**,  
 voltada para **nível médio/técnico**, com foco na **banca Cesgranrio**.
